@@ -60,6 +60,6 @@ class OmniTranslateData extends Template
 
     public function getEnableModule() {
         return $this->scopeConfig->getValue("mantramakers_omnitranslate/general/enabled",
-            \Magento\Store\Model\ScopeInterface::SCOPE_STORE,$this->storeManager->getStore()->getStoreId();
+            \Magento\Store\Model\ScopeInterface::SCOPE_STORE,$this->getCurrentStoreId());
     }
 }
