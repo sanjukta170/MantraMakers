@@ -1,0 +1,8 @@
+<?php
+/* @var $block \MantraMakers\OmniTranslate\Block\Adminhtml\Import */
+
+?>
+<form action="<?= $block->getFormAction() ?>" enctype="multipart/form-data" method="post">
+    <input type="file" name="csv_file" accept=".csv">
+    <button type="submit">Import CSV</button>
+</form>

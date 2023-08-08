@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="MantraMakers_OmniTranslate::omnitranslate" title="OmniTranslate" module="MantraMakers_OmniTranslate" sortOrder="55" resource="MantraMakers_OmniTranslate::omnitranslate"/>
+        <add id="MantraMakers_OmniTranslate::translate" title="Manage Translations" module="MantraMakers_OmniTranslate" sortOrder="10" action="omnitranslate/index" resource="MantraMakers_OmniTranslate::translate" parent="MantraMakers_OmniTranslate::omnitranslate"/>
+    </menu>
+</config>

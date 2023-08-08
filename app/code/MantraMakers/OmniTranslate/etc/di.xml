@@ -1,0 +1,22 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="omnitranslate_listing_data_source" xsi:type="string">OmniGridCollection</item>
+                <item name="employee_edit_form_data_source" xsi:type="string">OmniGridCollection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="OmniGridCollection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">omni_translate</argument>
+            <argument name="resourceModel" xsi:type="string">MantraMakers\OmniTranslate\Model\ResourceModel\TranslateModel</argument>
+        </arguments>
+    </virtualType>
+    <type name="MantraMakers\OmniTranslate\Model\ResourceModel\TranslateModel\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">omni_translate</argument>
+            <argument name="resourceModel" xsi:type="string">MantraMakers\OmniTranslate\Model\ResourceModel\TranslateModel</argument>
+        </arguments>
+    </type>
+</config>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">omnitranslate_form.omnitranslate_form_data_source</item>
+        </item>
+        <item name="label" xsi:type="string" translate="true">Add New Translation</item>
+    </argument>
+    <settings>
+        <buttons>
+            <button name="save" class="MantraMakers\OmniTranslate\Block\Adminhtml\Buttons\Save"/>
+            <button name="back" class="MantraMakers\OmniTranslate\Block\Adminhtml\Buttons\BackButton"/>
+        </buttons>
+        <namespace>omnitranslate_form</namespace>
+        <dataScope>data</dataScope>
+        <deps>
+            <dep>omnitranslate_form.omnitranslate_form_data_source</dep>
+        </deps>
+        <layout>
+            <navContainerName>left</navContainerName>
+            <type>tabs</type>
+        </layout>
+    </settings>
+    <dataSource name="omnitranslate_form_data_source">
+        <argument name="dataProvider" xsi:type="configurableObject">
+            <argument name="class" xsi:type="string">MantraMakers\OmniTranslate\Model\DataProvider</argument>
+            <argument name="name" xsi:type="string">omnitranslate_form_data_source</argument>
+            <argument name="primaryFieldName" xsi:type="string">translate_id</argument>
+            <argument name="requestFieldName" xsi:type="string">translate_id</argument>
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="submit_url" xsi:type="url" path="*/*/save"/>
+                </item>
+            </argument>
+        </argument>
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+            </item>
+        </argument>
+    </dataSource>
+    <fieldset name="omnitranslate_information">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="collapsible" xsi:type="boolean">false</item>
+                <item name="label" xsi:type="string" translate="true">Translation Information</item>
+                <item name="sortOrder" xsi:type="number">20</item>
+            </item>
+        </argument>
+        <field name="translate_id" sortOrder="10" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">translate_details</item>
+                </item>
+            </argument>
+            <settings>
+                <visible>false</visible>
+                <label translate="true">Translate ID</label>
+            </settings>
+        </field>
+
+        <field name="store_id">
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">Magento\Cms\Ui\Component\Listing\Column\Cms\Options</item>
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">int</item>
+                    <item name="label" xsi:type="string" translate="true">Store View</item>
+                    <item name="formElement" xsi:type="string">select</item>
+                    <item name="source" xsi:type="string">page</item>
+                    <item name="dataScope" xsi:type="string">store_id</item>
+                    <item name="default" xsi:type="string">0</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">true</item>
+                    </item>
+                </item>
+            </argument>
+        </field>
+
+        <field name="targetvalue" sortOrder="10" formElement="input">
+            <settings>
+                <dataType>varchar</dataType>
+                <visible>true</visible>
+                <label translate="true">Target Value</label>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+        <field name="translationvalue" sortOrder="20" formElement="input">
+            <settings>
+                <dataType>text</dataType>
+                <visible>true</visible>
+                <label translate="true">Translation Value</label>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+
+<!--        generate auto translate-->
+        <field name="generatetranslate" sortOrder="21" component="MantraMakers_OmniTranslate/js/form/component/generateTranslate" formElement="button">
+            <formElements>
+                <button>
+                    <settings>
+                        <title translate="true">Generate Auto Translate</title>
+                    </settings>
+                </button>
+            </formElements>
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="notice" xsi:type="string" translate="true">if your using regex in the field the translation may not be proper.recommend to give persomal translation in that case</item>
+                </item>
+            </argument>
+        </field>
+
+<!--        if generate translate clicked -->
+        <field name="language_select">
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">MantraMakers\OmniTranslate\Model\Source\Language</item>
+                <item name="config" xsi:type="array">
+                    <item name="formElement" xsi:type="string">select</item>
+                    <item name="component" xsi:type="string">Magento_Ui/js/form/element/select</item>
+                    <item name="label" xsi:type="string" translate="true">Source Language Select</item>
+                    <item name="sortOrder" xsi:type="number">22</item>
+                    <item name="notice" xsi:type="string" translate="true">this field will be considered only if your generating auto translation</item>
+                </item>
+            </argument>
+        </field>
+
+        <field name="classname" sortOrder="30" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">classname</item>
+                </item>
+            </argument>
+            <settings>
+                <label>Target Value Class/Tag Name</label>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+                <dataType>text</dataType>
+                <visible>true</visible>
+            </settings>
+        </field>
+        <field name="targetvaluetype" sortOrder="40" formElement="select">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">targetvaluetype</item>
+                </item>
+            </argument>
+            <settings>
+                <label>Target Value Type</label>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">false</rule>
+                </validation>
+                <dataType>select</dataType>
+                <visible>true</visible>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <options class="MantraMakers\OmniTranslate\Model\Config\Source\typeOfSelect"/>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
+        <field name="isautotranslate" sortOrder="40" formElement="select">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">isautotranslate</item>
+                    <item name="disable" xsi:type="boolean">true</item>
+                </item>
+            </argument>
+            <settings>
+                <label>Is Auto Translate</label>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+                <dataType>select</dataType>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <options class="MantraMakers\OmniTranslate\Model\Config\Source\IsTranslate"/>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
+    </fieldset>
+</form>

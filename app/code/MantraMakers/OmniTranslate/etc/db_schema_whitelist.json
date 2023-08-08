@@ -1,0 +1,17 @@
+{
+    "omni_translate": {
+        "column": {
+            "translate_id": true,
+            "store_id": true,
+            "targetvalue": true,
+            "translationvalue": true,
+            "classname": true,
+            "targetvaluetype": true,
+            "created_at": true,
+            "isautotranslate": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

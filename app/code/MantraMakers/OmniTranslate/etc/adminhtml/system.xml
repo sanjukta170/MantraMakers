@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="mantramakers_omnitranslate" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>MantraMakers OmniTranslate Configuration</label>
+            <tab>general</tab>
+            <resource>MantraMakers_OmniTranslate::config</resource>
+            <group id="general" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Configuration</label>
+
+                <!-- Enable/Disable Module -->
+                <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Module</label>
+                    <comment>Enable or disable the MantraMakers OmniTranslate module.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <!-- Enable/Disable Auto Translate PDP -->
+                <field id="is_auto_translate_pdp" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Auto Translate for PDP</label>
+                    <comment>Enable or disable automatic translation for Product Detail Pages (PDP).</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <!-- Enable/Disable Auto Translate PLP -->
+                <field id="is_auto_translate_plp" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Auto Translate for PLP</label>
+                    <comment>Enable or disable automatic translation for Product Listing Pages (PLP).</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <!-- Enable/Disable Auto Translate CMS -->
+                <field id="is_auto_translate_cms" translate="label comment" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Auto Translate for CMS</label>
+                    <comment>Enable or disable automatic translation for All CMS pages (CMS).</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+            </group>
+        </section>
+    </system>
+</config>
