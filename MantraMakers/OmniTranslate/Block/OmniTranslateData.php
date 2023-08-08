@@ -42,7 +42,7 @@ class OmniTranslateData extends Template
      */
     public function getTranslateData()
     {
-        if ($this->getEnableModule) {
+        if ($this->getEnableModule()) {
             return $this->translateModel->addFilter('store_id', $this->getCurrentStoreId())->getData();
         } else {
             return null;
