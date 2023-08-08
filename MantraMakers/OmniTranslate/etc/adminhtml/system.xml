@@ -15,26 +15,26 @@
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
 
-                <!-- Enable/Disable Auto Translate PDP -->
-                <field id="is_auto_translate_pdp" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Enable Auto Translate for PDP</label>
-                    <comment>Enable or disable automatic translation for Product Detail Pages (PDP).</comment>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                </field>
+<!--                &lt;!&ndash; Enable/Disable Auto Translate PDP &ndash;&gt;-->
+<!--                <field id="is_auto_translate_pdp" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">-->
+<!--                    <label>Enable Auto Translate for PDP</label>-->
+<!--                    <comment>Enable or disable automatic translation for Product Detail Pages (PDP).</comment>-->
+<!--                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>-->
+<!--                </field>-->
 
-                <!-- Enable/Disable Auto Translate PLP -->
-                <field id="is_auto_translate_plp" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Enable Auto Translate for PLP</label>
-                    <comment>Enable or disable automatic translation for Product Listing Pages (PLP).</comment>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                </field>
+<!--                &lt;!&ndash; Enable/Disable Auto Translate PLP &ndash;&gt;-->
+<!--                <field id="is_auto_translate_plp" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">-->
+<!--                    <label>Enable Auto Translate for PLP</label>-->
+<!--                    <comment>Enable or disable automatic translation for Product Listing Pages (PLP).</comment>-->
+<!--                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>-->
+<!--                </field>-->
 
-                <!-- Enable/Disable Auto Translate CMS -->
-                <field id="is_auto_translate_cms" translate="label comment" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Enable Auto Translate for CMS</label>
-                    <comment>Enable or disable automatic translation for All CMS pages (CMS).</comment>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                </field>
+<!--                &lt;!&ndash; Enable/Disable Auto Translate CMS &ndash;&gt;-->
+<!--                <field id="is_auto_translate_cms" translate="label comment" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">-->
+<!--                    <label>Enable Auto Translate for CMS</label>-->
+<!--                    <comment>Enable or disable automatic translation for All CMS pages (CMS).</comment>-->
+<!--                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>-->
+<!--                </field>-->
 
             </group>
         </section>
