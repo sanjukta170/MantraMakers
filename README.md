@@ -1,6 +1,6 @@
 # OmniTranslate Module for Magento 2 By MantraMakers
 
-####Welcome to the Multi-Store Website Translation Module for Magento 2! This powerful module is designed to revolutionize the way you engage with your customers by breaking down language barriers and creating a truly inclusive online shopping experience.
+#### Welcome to the Multi-Store Website Translation Module for Magento 2! This powerful module is designed to revolutionize the way you engage with your customers by breaking down language barriers and creating a truly inclusive online shopping experience.
 
 ## Problem Statement
 Many non-native English speakers face challenges when interacting with e-commerce websites. Language barriers can lead to confusion, reduced engagement, and a lack of trust in the shopping process. Critical checkout instructions, product details, and policies often remain inaccessible in the customers' preferred languages, limiting their overall experience.
