@@ -77,6 +77,11 @@
         </field>
 
         <field name="targetvalue" sortOrder="10" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="notice" xsi:type="string" translate="true">Provide the String/Regex you want to translate</item>
+                </item>
+            </argument>
             <settings>
                 <dataType>varchar</dataType>
                 <visible>true</visible>
@@ -85,13 +90,13 @@
                     <rule name="required-entry" xsi:type="boolean">true</rule>
                 </validation>
             </settings>
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="notice" xsi:type="string" translate="true">Provide the String/Regex you want to translate</item>
-                </item>
-            </argument>
         </field>
         <field name="translationvalue" sortOrder="20" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="notice" xsi:type="string" translate="true">Provide Translated String</item>
+                </item>
+            </argument>
             <settings>
                 <dataType>text</dataType>
                 <visible>true</visible>
@@ -100,15 +105,15 @@
                     <rule name="required-entry" xsi:type="boolean">true</rule>
                 </validation>
             </settings>
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="notice" xsi:type="string" translate="true">Provide Translated String</item>
-                </item>
-            </argument>
         </field>
 
-<!--        generate auto translate-->
+        <!--        generate auto translate-->
         <field name="generatetranslate" sortOrder="21" component="MantraMakers_OmniTranslate/js/form/component/generateTranslate" formElement="button">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="notice" xsi:type="string" translate="true">if your using regex in the field Target Value the translation may not be proper.recommend to give Own translation in that case</item>
+                </item>
+            </argument>
             <formElements>
                 <button>
                     <settings>
@@ -116,14 +121,9 @@
                     </settings>
                 </button>
             </formElements>
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="notice" xsi:type="string" translate="true">if your using regex in the field Target Value the translation may not be proper.recommend to give Own translation in that case</item>
-                </item>
-            </argument>
         </field>
 
-<!--        if generate translate clicked -->
+        <!--        if generate translate clicked -->
         <field name="language_select">
             <argument name="data" xsi:type="array">
                 <item name="options" xsi:type="object">MantraMakers\OmniTranslate\Model\Source\Language</item>
