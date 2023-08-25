@@ -3,5 +3,6 @@
     <menu>
         <add id="MantraMakers_OmniTranslate::omnitranslate" title="OmniTranslate" module="MantraMakers_OmniTranslate" sortOrder="55" resource="MantraMakers_OmniTranslate::omnitranslate"/>
         <add id="MantraMakers_OmniTranslate::translate" title="Manage Translations" module="MantraMakers_OmniTranslate" sortOrder="10" action="omnitranslate/index" resource="MantraMakers_OmniTranslate::translate" parent="MantraMakers_OmniTranslate::omnitranslate"/>
+        <add id="MantraMakers_OmniTranslate::configuration" title="Configuration" module="MantraMakers_OmniTranslate" sortOrder="11" action="adminhtml/system_config/edit/section/mantramakers_omnitranslate" resource="MantraMakers_OmniTranslate::configuration" parent="MantraMakers_OmniTranslate::omnitranslate"/>
     </menu>
 </config>

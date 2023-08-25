@@ -85,6 +85,11 @@
                     <rule name="required-entry" xsi:type="boolean">true</rule>
                 </validation>
             </settings>
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="notice" xsi:type="string" translate="true">Provide the String/Regex you want to translate</item>
+                </item>
+            </argument>
         </field>
         <field name="translationvalue" sortOrder="20" formElement="input">
             <settings>
@@ -95,6 +100,11 @@
                     <rule name="required-entry" xsi:type="boolean">true</rule>
                 </validation>
             </settings>
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="notice" xsi:type="string" translate="true">Provide Translated String</item>
+                </item>
+            </argument>
         </field>
 
 <!--        generate auto translate-->
@@ -108,7 +118,7 @@
             </formElements>
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="notice" xsi:type="string" translate="true">if your using regex in the field the translation may not be proper.recommend to give persomal translation in that case</item>
+                    <item name="notice" xsi:type="string" translate="true">if your using regex in the field Target Value the translation may not be proper.recommend to give Own translation in that case</item>
                 </item>
             </argument>
         </field>
@@ -130,7 +140,8 @@
         <field name="classname" sortOrder="30" formElement="input">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="source" xsi:type="string">classname</item>
+                    <item name="source" xsi:type="string">Target classname/tag/id</item>
+                    <item name="notice" xsi:type="string" translate="true">Please put . if your adding classname before the string and put # if your putting Id before the string while adding the data.</item>
                 </item>
             </argument>
             <settings>
@@ -146,10 +157,11 @@
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="source" xsi:type="string">targetvaluetype</item>
+                    <item name="notice" xsi:type="string" translate="true">This field will help you to select either HTML or Text inside the selected element you provided before.</item>
                 </item>
             </argument>
             <settings>
-                <label>Target Value Type</label>
+                <label>Target classname/tag/id Select Type</label>
                 <validation>
                     <rule name="required-entry" xsi:type="boolean">false</rule>
                 </validation>
@@ -169,6 +181,7 @@
                 <item name="config" xsi:type="array">
                     <item name="source" xsi:type="string">isautotranslate</item>
                     <item name="disable" xsi:type="boolean">true</item>
+                    <item name="notice" xsi:type="string" translate="true">Do not change anything if the translation is not a Auto Translate</item>
                 </item>
             </argument>
             <settings>
